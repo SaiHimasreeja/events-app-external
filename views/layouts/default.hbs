@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Team S4 Website</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+</head>
+<body style="background-color:powderblue;">
+  <div>
+      <h1>Welcome to S4 application</h1>
+    {{{body}}}
+</div>
+<div>
+  <h2>Add an event</h2>
+    <form action="/event" method="post">
+       title: <input name="title" type="text" /> <br />
+       description: <input name="description" type="text" /> <br />
+       <br />
+        <input type="submit" name="submit" value="submit" />
+    </form>
+  <h3>Update an event</h3>
+    <form action="/eventupdate" method="post">
+       Eventname: <input name="Eventname" type="text" /> <br />
+       Update: <input name="Update" type="text" /> <br />
+       <br />
+        <input type="submit" name="submit" value="submit" />
+    </form>
+  </div>
+</body>
+</html>
