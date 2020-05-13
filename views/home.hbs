@@ -1,5 +1,25 @@
 <ul >
   {{#events}}
+  <ul data-role="listview">
+    <li>
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
+          </li>
+         <li>
+        <h2>{{ EventId }}</h2>
+        <p>{{ Updatedescription }}</p>
+    </li>
+    <li>
+        <h2>{{ EventId }}</h2>
+        <p>{{ ImageUpload }}</p>
+    </li>
+    </ul>
+   
+  {{/events}}
+  
+
+</ul>
+  {{#events}}
     <li>
         <h2>{{ title }}</h2>
         <p>{{ description }}</p>

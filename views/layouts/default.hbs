@@ -3,30 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Team S4 Website</title>
+  <title>Team S4's Website</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 </head>
 <body style="background-color:powderblue;">
+<center>
   <div>
-      <h1>Welcome to S4 application</h1>
+      <h1>Welcome to S4's Event application</h1>
     {{{body}}}
 </div>
 <div>
-  <h2>Add an event</h2>
+  <h2 >Add an event</h2>
     <form action="/event" method="post">
        title: <input name="title" type="text" /> <br />
        description: <input name="description" type="text" /> <br />
        <br />
         <input type="submit" name="submit" value="submit" />
     </form>
-  <h3>Update an event</h3>
-    <form action="/eventupdate" method="post">
-       Eventname: <input name="Eventname" type="text" /> <br />
-       Update: <input name="Update" type="text" /> <br />
+<h2 >Update an event</h2>
+    <form action="/event" method="post">
+       EventId: <input name="EventId" type="text" /> <br />
+       Updatedescription: <input name="Updatedescription" type="text" /> <br />
        <br />
         <input type="submit" name="submit" value="submit" />
     </form>
+    <h2>Add Image</h2>
+    <form action="/event" method="post">
+       EventId: <input name="EventId" type="text" /> <br />
+      ImageUpload: <input name="Updatedescription" type="text" /> <br />
+       <br />
+        <input type="submit" name="Upload" value="Upload" />
+    </form>
   </div>
+</center>
 </body>
 </html>
