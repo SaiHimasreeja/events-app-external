@@ -7,13 +7,14 @@
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 </head>
-<body>
+
+<body style="background: url(https://previews.123rf.com/images/rawpixel/rawpixel1903/rawpixel190304795/118993642-plain-pastel-green-with-beige-wooden-product-background.jpg)">
 <center>
   <div  style= "background-color: grey;" >
       <h1>Welcome to S4 application</h1>
     
 </div>
-<div  style="background-color: powderblue;">
+<div >
 {{{body}}}
 </div>
 </center>
@@ -21,21 +22,63 @@
 <center>
   <h2>Add an event</h2>
     <form action="/event" method="post">
-       title: <input name="title" type="text" /> <br />
-       description: <input name="description" type="text" /> <br />
+       <table>
+        <tr>
+            <td align="right">title: </td>
+            <td align="left"><input type="text" name="title" /></td>
+        </tr> 
+        <tr>
+            <td align="right">description: </td>
+            <td align="left"><input type="text" name="description" /></td>
+        </tr> 
+      </table>
             <center>
   </div>
   <div>
 <center>
   <h2>Add Location</h2>
-       Country: <input name="Country" type="text" /> <br />
-       City: <input name="City"  type="text"/> <br />
+        <table>
+        <tr>
+            <td align="right">Country: </td>
+            <td align="left"><input type="text" name="Country" /></td>
+        </tr> 
+        <tr>
+            <td align="right">City: </td>
+            <td align="left"><input type="text" name="City" /></td>
+        </tr> 
+      </table>
+
        <center>
+    </div>
+    <div>   
+    <center>
     <h2>Add Image</h2>
-    Image:<input type="file" id="file-selector" accept=".jpg, .jpeg, .png"><br />
+            <table>
+        <tr>
+            <td align="right">Image: </td>
+            <td align="left"><input type="file" id="file-selector" accept=".jpg, .jpeg, .png" name="Image" /></td>
+        </tr> 
+      </table>
+
     <input type="submit" name="submit" value="submit" />
     </center>
+    </div>
+    <div id="googleMap" style="width:100%;height:400px;">
+    <center>
+<h2>Maps</h2>
+    <script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(20.593683,78.962883),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+<script src="h_ttps://maps.googleapis.com/maps/api/js?key=AIzaSyDfCH1eQIpfRbul9zzTepd--wgsKJ1ZCMw&callback=myMap"></script>   
+    </center>
+    </div> 
     </form>
-  </div>
+  
 </body>
 </html>
