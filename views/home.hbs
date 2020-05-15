@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <table style="width:100%">
 <style>
 table, th, td {
@@ -12,6 +12,7 @@ table, th, td {
     <th>Country</th>
     <th>City</th>
     <th>Image</th>
+     <th>Like</th>
   </tr>
   {{#events}}
   <tr>
@@ -19,7 +20,15 @@ table, th, td {
     <td>{{description}}</td>
      <td>{{Country}}</td>
     <td>{{City}}</td>
-    <td type="image">{{Image}}</td>
-  </tr>
+    <td><img src="{{Image}}" type="image" value="image"></img></td>
+   <td><!-- Use an element to toggle between a like/dislike icon -->
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+<script>
+function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+</script>
+</td>
+ </tr>
     {{/events}}
 </table>
